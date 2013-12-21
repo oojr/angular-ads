@@ -1,0 +1,29 @@
+[
+    {
+         
+        "headline": "Master AngularJS Book", 
+        "imageUrl": "img/ads/masterng.png",
+        "text": "Make the most out of AngularJS by understanding the AngularJS philosophy and applying it to real life development tasks",
+        "link":"http://www.amazon.com/dp/1782161821/?tag=zapslide-20"
+    }, 
+    {
+        "headline": "AngularJS - O'Reilly Media", 
+        "imageUrl": "img/ads/bradlyng.png", 
+        "text": "Guided by two engineers who worked on AngularJS at Google, you’ll walk through the framework’s key features, and then build a working AngularJS app", 
+        "link":"http://www.amazon.com/dp/1449344852/?tag=zapslide-20"
+    }, 
+    {
+        "headline": "Flat UI Pro", 
+        "imageUrl": "img/ads/flatui.jpg", 
+        "text": "Flat UI Pro is made on the basis of Twitter Bootstrap in a stunning flat-style, and the kit also includes a PSD version for designers.", 
+        "link": "http://designmodo.com/flat/?u=728"
+    }, 
+    {
+        "headline": "An AngularJS Andriod App", 
+        "imageUrl": "img/ads/djpromo.png", 
+        "text": "Diary & Journal is an hybrid app made with AngularJS and phonegap/cordova, looks and feels native", 
+        "link": "https://play.google.com/store/apps/details?id=com.zapslide.diaryjournal"
+    }
+    
+    
+]

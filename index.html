@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <title>Angular Ads</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/angular-ads.css" rel="stylesheet">
+    <link href="css/monokai_sublime.css" rel="stylesheet">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/angular-ads.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    <style>
+    body{
+      padding-top: 75px ;
+      font-family:'Lato';
+      background-image: url(img/white_wave.png);
+    }
+    .jumbotron{
+      background-color: white;
+      border: 1px solid #e9e9e9;
+
+    }
+    .jumbotron h1{
+      font-family:'Lato';
+      color:#428bca;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+      <div class="col-md-9">
+        <div class="jumbotron">
+          <h1>angular-ads</h1>
+            <p>A directive for creating advertisements out of referral and affiliates links</p>
+        <p><a class="btn btn-default btn-lg" role="button" target="_blank" href="http://github.com/oojr/angular-ads"><i class="fa fa-github-alt"></i> View on Github</a></p>
+        </div>
+        <p><code>bower install angular-ads</code></p>
+        <h1> Getting Started</h1>
+        <p>1. Link <code>angular-ads.css</code> and <code>angular-ads.js</code> in your page</p>
+<!-- 
+********************
+********************
+********************
+HTML
+-->
+<pre><code class="xml"><span class="doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;<span class="html">html</span> <span class="attribute">ng-app</span>=<span class="value">"app"</span>&gt;
+  <span class="tag">&lt;<span class="title">head</span>&gt;
+    <span class="comment">&lt;!-- include the angular-ads css styles --&gt;</span>
+    <span class="tag">&lt;<span class="title">link</span> <span class="attribute">href</span>=<span class="value">"css/angular-ads.css"</span> <span class="attribute">rel</span>=<span class="value">"stylesheet"</span>&gt;</span>
+    <span class="comment">&lt;!-- include the angular-ads js file --&gt;</span>
+    <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"js/angular.js"</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;<span class="tag">&lt;/</span><span class="title">script</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"js/angular-ads.js"</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;<span class="tag">&lt;/</span><span class="title">script</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"js/app.js"</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;<span class="tag">&lt;/</span><span class="title">script</span>&gt;</span>
+</code></pre>
+<!-- 
+********************
+********************
+********************
+--> 
+        <p>2. Add <code>angular-ads</code> to your Angular app's dependencies</p>
+<!-- 
+********************
+********************
+********************
+-->
+<pre><code class="javascript"><span class="comment">// example of an app.js file</span>
+angular.module(<span class="string">'app'</span>, [<span class="string">'angular-ads'</span>]);
+  </code></pre>
+<!-- 
+********************
+***********JS*******
+-->
+        <p>3a. Use the <code>og-ads</code> directive attribute, by default it is set up to get json from <code>ads/ads.json</code>
+<!-- 
+********************
+********************
+********************
+HTML starts
+-->         
+<pre><code class="xml">  <span class="tag">&lt;<span class="title">body</span>&gt;
+    <span class="comment">&lt;!-- This div grabs data from the file path ads/ads.json --&gt;</span>  
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">og-ads&gt;<span class="tag">&lt;/</span><span class="title">div</span>&gt;</span>
+</code></pre>
+<!-- 
+********************
+********************
+**HTML Ends*********
+-->  
+        <p>3b. Use the <code>og-ads</code> directive attribute, and an additional attribute <code>og-ads-url</code> to grab json from a different file path than the default</code>
+
+<!-- 
+********************
+********************
+********************
+HTML starts
+-->         
+<pre><code class="xml">  <span class="tag">&lt;<span class="title">body</span>&gt;
+    <span class="comment">&lt;!-- This div grabs data from the file path ads/coolads.json --&gt;</span>  
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">og-ads <span class="attribute">og-ads-url</span>=<span class="value">"ads/coolads.json"</span>&gt;<span class="tag">&lt;/</span><span class="title">div</span>&gt;</span>
+</code></pre>
+<!-- 
+********************
+********************
+**HTML Ends*********
+-->  
+
+        <p>4. Set up a json file, An example model of the file <code>ads/ads.json</code> is:</p>
+
+<pre><code class="json">[
+  {
+    "<span class="attribute">headline</span>": <span class="value"><span class="string">"Headline Text Goes here"</span></span>,
+    "<span class="attribute">imageUrl</span>": <span class="value"><span class="string">"path/to/ad/image.jpg"</span></span>,
+    "<span class="attribute">text</span>": <span class="value"><span class="string">"Description Text of the Ad goes here"</span></span>,
+    "<span class="attribute">link</span>": <span class="value"><span class="string">"http://your-affiliate-link-here.com"</span></span>
+  </span>},
+  {
+    "<span class="attribute">headline</span>": <span class="value"><span class="string">"Beyonce - Beyonce"</span></span>,
+    "<span class="attribute">imageUrl</span>": <span class="value"><span class="string">"img/beyonce.png"</span></span>,
+    "<span class="attribute">text</span>": <span class="value"><span class="string">"Beyonce made an stealth album with no promotion, wow oh wow"</span></span>,
+    "<span class="attribute">link</span>": <span class="value"><span class="string">"http://btunes.com/albums/beyonce"</span></span>
+  </span>},
+  {
+    "<span class="attribute">headline</span>": <span class="value"><span class="string">"Buy Bitcoins!"</span></span>,
+    "<span class="attribute">imageUrl</span>": <span class="value"><span class="string">"img/ads/bitcoin.jpg"</span></span>,
+    "<span class="attribute">text</span>": <span class="value"><span class="string">"pump and dump, pump and dump, pump and dump"</span></span>,
+    "<span class="attribute">link</span>": <span class="value"><span class="string">"http://pumpandump.com/refer-a-friend"</span></span>
+  </span>}
+]
+</code></pre>
+    </div>
+    <div class="col-md-3">
+      <div og-ads og-ads-url='ads/ads.json'></div>
+    
+   
+   </div>
+
+  </div>
+
+
+</div>
+   
+  </body>
+</html>

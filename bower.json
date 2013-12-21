@@ -1,0 +1,11 @@
+{
+  "name": "angular-ads",
+  "version": "0.1.0",
+  "main": [
+    "./js/angular-ad.js",
+    "./css/angular-ads.css"
+  ],
+  "dependencies": {
+    "angular": "~1.2.5"
+  }
+}
