@@ -2,13 +2,13 @@
     {
          
         "headline": "Master AngularJS Book", 
-        "imageUrl": "img/ads/masterng.png",
+        "imageUrl": "img/ads/masterng.PNG",
         "text": "Make the most out of AngularJS by understanding the AngularJS philosophy and applying it to real life development tasks",
         "link":"http://www.amazon.com/dp/1782161821/?tag=zapslide-20"
     }, 
     {
         "headline": "AngularJS - O'Reilly Media", 
-        "imageUrl": "img/ads/bradlyng.png", 
+        "imageUrl": "img/ads/bradlyng.PNG", 
         "text": "Guided by two engineers who worked on AngularJS at Google, you’ll walk through the framework’s key features, and then build a working AngularJS app", 
         "link":"http://www.amazon.com/dp/1449344852/?tag=zapslide-20"
     }, 
