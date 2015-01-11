@@ -51,7 +51,7 @@ angular.module('angular-ads', [])
             }]
         };
     })
-    .factory('adverts', function($http){
+    .factory('adverts', ['$http', function($http){
         getCustomAds = function(newUrl){
             return $http.get(newUrl);
         };
@@ -62,4 +62,4 @@ angular.module('angular-ads', [])
             getCustomAds:getCustomAds,
             getAds: getAds
         };
-      });
+      }]);
